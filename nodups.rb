@@ -1,8 +1,10 @@
 # http://www.careercup.com/question?id=5091887140569088
 #
 
-def nodups(iterable)
-     return iterable.split('').uniq.join
+class Nodups 
+    def remove_dupes(iterable)
+         return iterable.split('').uniq.join
+    end
 end
 
 #    index = iterable.length
@@ -23,5 +25,3 @@ end
 #    uniqs.values.sort
 
 
-aa = "When in the course of human events"
-print nodups(aa)
