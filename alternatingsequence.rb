@@ -17,6 +17,9 @@ class AlternatingSequence
           if value > 0
             posindex = pointer + index
             if pointer > 0
+# This is ugly, but it's not easy to insert or remove values in the middle
+# of an array
+# Special case to avoid the semantics of working[-1]
               working = working[0..pointer-1] + [working[posindex]] + working[pointer..posindex-1] + working[posindex+1..-1]
             else
               working = [working[posindex]] + working[pointer..posindex-1] + working[posindex+1..-1]
@@ -26,7 +29,6 @@ class AlternatingSequence
           end
 # There are no more positive entries so we are done
         end    # loop over tail of working, break to here
-        #return working
       end  #if
       return working if length < pointer+1 
 # Coerce the second spot with the negative entry with lowest index
@@ -42,7 +44,6 @@ class AlternatingSequence
 # There are no more positive entries so we are done
         end    # loop over tail of working
       else
-        #return working
       end # if
       pointer = pointer + 2
     end #while loop over pointer
