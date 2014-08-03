@@ -36,6 +36,3 @@ class IsPrivate
 
 end
 
-i = IsPrivate.new
-result = i.isprivate("192.168.100.100")
-puts  result
