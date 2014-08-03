@@ -6,5 +6,6 @@ require_relative '../alternatingsequence'
 require_relative "../splitrespectingquotes"
 require_relative "../commonestword"
 require_relative "../isprivate"
+require_relative "../47"
 
 require 'yaml'
